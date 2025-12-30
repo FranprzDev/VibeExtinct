@@ -1,0 +1,275 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="VibeExtinct | Sonic Firefighting Drones">
+	<main class="relative w-full">
+		
+        <!-- Navigation -->
+        <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center mix-blend-difference">
+            <div class="text-2xl font-bold tracking-tighter text-white">VIBE<span class="text-orange-500">EXTINCT</span></div>
+            <div class="flex gap-6 text-sm font-semibold uppercase tracking-widest text-white">
+                <a href="#features" class="hover:text-orange-500 transition-colors">Tech</a>
+                <a href="#roadmap" class="hover:text-orange-500 transition-colors">Roadmap</a>
+                <a href="/blog" class="hover:text-orange-500 transition-colors">Intel</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="h-screen w-full flex flex-col justify-center items-center relative overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black z-10"></div>
+                <!-- Simulated video background using CSS gradient for now, replace with <video> if available -->
+                <div class="w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-900/40 via-black to-black animate-pulse-slow"></div>
+            </div>
+            
+            <div class="z-20 text-center px-4 hero-content opacity-0 translate-y-10">
+                <h2 class="text-orange-500 tracking-[0.5em] text-sm md:text-xl font-bold mb-4 uppercase">Project VibeExtinct</h2>
+                <h1 class="text-5xl md:text-8xl lg:text-9xl font-black mb-6 leading-none glitch-text">
+                    SONIC<br/>WARFARE<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">ON FIRE</span>
+                </h1>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg md:text-xl mb-12 font-light border-l-2 border-orange-500 pl-6 text-left">
+                    Extinguishing massive wildfires using autonomous drone swarms equipped with 30-60 Hz low-frequency acoustic cannons. <span class="text-white font-bold">No water required.</span>
+                </p>
+                
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <a href="#physics" class="px-8 py-4 bg-orange-600 text-black font-bold uppercase tracking-widest hover:bg-orange-500 transition-all clip-path-slant">
+                        How It Works
+                    </a>
+                    <a href="https://github.com/FranprzDev/VibeExtinct" target="_blank" class="px-8 py-4 border border-white/20 text-white font-bold uppercase tracking-widest hover:bg-white/10 transition-all clip-path-slant">
+                        GitHub Repo
+                    </a>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+                <span class="text-[10px] uppercase tracking-widest">Scroll to Initialize</span>
+                <div class="w-[1px] h-16 bg-gradient-to-b from-orange-500 to-transparent"></div>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section id="features" class="py-32 px-6 relative bg-zinc-950">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-20">
+                    <h2 class="text-4xl md:text-6xl font-bold mb-4">SYSTEM <span class="text-orange-600">CAPABILITIES</span></h2>
+                    <div class="h-1 w-24 bg-orange-600"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="feature-card group p-8 border border-white/10 bg-black hover:border-orange-500/50 transition-all duration-500">
+                        <div class="text-orange-500 text-4xl mb-6">🔊</div>
+                        <h3 class="text-2xl font-bold mb-4 group-hover:text-orange-500 transition-colors">Acoustic Suppression</h3>
+                        <p class="text-gray-400">Deep bass waves (30-60 Hz) disrupt the flame boundary layer, separating fuel from oxygen.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card group p-8 border border-white/10 bg-black hover:border-orange-500/50 transition-all duration-500">
+                        <div class="text-orange-500 text-4xl mb-6">🛸</div>
+                        <h3 class="text-2xl font-bold mb-4 group-hover:text-orange-500 transition-colors">Swarm Intelligence</h3>
+                        <p class="text-gray-400">Coordinated drone arrays optimize wave interference patterns for maximum extinction efficiency.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card group p-8 border border-white/10 bg-black hover:border-orange-500/50 transition-all duration-500">
+                        <div class="text-orange-500 text-4xl mb-6">👁️</div>
+                        <h3 class="text-2xl font-bold mb-4 group-hover:text-orange-500 transition-colors">AI Vision (YOLOv8)</h3>
+                        <p class="text-gray-400">Real-time thermal detection and fire intensity mapping for autonomous targeting.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="feature-card group p-8 border border-white/10 bg-black hover:border-orange-500/50 transition-all duration-500">
+                        <div class="text-orange-500 text-4xl mb-6">🔋</div>
+                        <h3 class="text-2xl font-bold mb-4 group-hover:text-orange-500 transition-colors">Waterless Ops</h3>
+                        <p class="text-gray-400">Eliminates heavy water payloads, increasing flight time and operational range.</p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="feature-card group p-8 border border-white/10 bg-black hover:border-orange-500/50 transition-all duration-500">
+                        <div class="text-orange-500 text-4xl mb-6">🛰️</div>
+                        <h3 class="text-2xl font-bold mb-4 group-hover:text-orange-500 transition-colors">Satellite Uplink</h3>
+                        <p class="text-gray-400">Integration with NASA FIRMS API for global hotspot monitoring and rapid deployment.</p>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="feature-card group p-8 border border-white/10 bg-black hover:border-orange-500/50 transition-all duration-500">
+                        <div class="text-orange-500 text-4xl mb-6">🛡️</div>
+                        <h3 class="text-2xl font-bold mb-4 group-hover:text-orange-500 transition-colors">Eco-Preservation</h3>
+                        <p class="text-gray-400">Zero chemical retardants. Pure physics based extinction that leaves no toxic residue.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Physics Section -->
+        <section id="physics" class="py-32 px-6 bg-black relative overflow-hidden">
+             <div class="absolute top-0 right-0 w-1/2 h-full bg-orange-900/5 blur-3xl rounded-full pointer-events-none"></div>
+             
+             <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8">THE <span class="text-orange-600">PHYSICS</span></h2>
+                    <p class="text-xl text-gray-300 mb-6">
+                        Sound is a pressure wave. At specific low frequencies (30-60 Hz), these waves create rapid pressure fluctuations that:
+                    </p>
+                    <ul class="space-y-4 text-gray-400 font-mono text-sm md:text-base">
+                        <li class="flex items-center gap-4">
+                            <span class="w-2 h-2 bg-orange-500 rounded-full"></span>
+                            Increase local air velocity, thinning the flame boundary.
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <span class="w-2 h-2 bg-orange-500 rounded-full"></span>
+                            Disrupt the fuel-oxygen mixture stability.
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <span class="w-2 h-2 bg-orange-500 rounded-full"></span>
+                            Mechanically separate the flame from the fuel source.
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Visual representation of waves -->
+                <div class="w-full md:w-1/2 relative h-80 border border-white/10 bg-white/5 flex items-center justify-center">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-40 h-40 border-4 border-orange-500/30 rounded-full animate-ping [animation-duration:1s]"></div>
+                        <div class="w-40 h-40 border-4 border-orange-500/30 rounded-full animate-ping [animation-duration:1.5s]"></div>
+                        <div class="w-40 h-40 border-4 border-orange-500/30 rounded-full animate-ping [animation-duration:2s]"></div>
+                    </div>
+                    <div class="z-10 text-center">
+                        <div class="text-6xl font-black text-white">45 Hz</div>
+                        <div class="text-orange-500 uppercase tracking-widest text-sm">Target Frequency</div>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="py-20 border-y border-white/10 bg-zinc-950/50">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <p class="text-sm font-mono text-gray-500 uppercase tracking-[0.3em] mb-12">Powered By</p>
+                <div class="flex flex-wrap justify-center gap-12 md:gap-20 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                    <span class="text-xl font-bold flex items-center gap-2"><span class="text-white">Next</span>.js</span>
+                    <span class="text-xl font-bold flex items-center gap-2"><span class="text-orange-500">Nest</span>.js</span>
+                    <span class="text-xl font-bold flex items-center gap-2"><span class="text-blue-500">Tensor</span>Flow</span>
+                    <span class="text-xl font-bold flex items-center gap-2"><span class="text-green-500">ROS</span> 2</span>
+                    <span class="text-xl font-bold flex items-center gap-2"><span class="text-yellow-400">YOLO</span>v8</span>
+                    <span class="text-xl font-bold flex items-center gap-2"><span class="text-green-400">Supabase</span></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap -->
+        <section id="roadmap" class="py-32 px-6 bg-black">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-center text-4xl md:text-6xl font-bold mb-20">DEPLOYMENT <span class="text-orange-600">PHASES</span></h2>
+                
+                <div class="space-y-12 relative before:absolute before:left-4 md:before:left-1/2 before:top-0 before:bottom-0 before:w-px before:bg-white/10">
+                    
+                    <!-- Phase 1 -->
+                    <div class="relative flex flex-col md:flex-row items-center gap-8">
+                        <div class="w-full md:w-1/2 md:text-right">
+                            <h3 class="text-2xl font-bold text-white">Phase 1: Concept</h3>
+                            <div class="text-orange-500 font-mono text-sm mb-2">Q1 2025 (Current)</div>
+                            <p class="text-gray-400 text-sm">Landing Page, Python Wave Simulation, Architecture Design.</p>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-orange-500 rounded-full shadow-[0_0_20px_rgba(249,115,22,0.8)] z-10"></div>
+                        <div class="w-full md:w-1/2 md:pl-8 hidden md:block"></div>
+                    </div>
+
+                    <!-- Phase 2 -->
+                    <div class="relative flex flex-col md:flex-row items-center gap-8">
+                        <div class="w-full md:w-1/2 md:text-right hidden md:block"></div>
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-zinc-700 border border-white/20 rounded-full z-10"></div>
+                        <div class="w-full md:w-1/2 md:pl-0">
+                            <h3 class="text-2xl font-bold text-gray-500">Phase 2: Core</h3>
+                            <div class="text-gray-600 font-mono text-sm mb-2">Q2 2025</div>
+                            <p class="text-gray-600 text-sm">Nest.js API, YOLOv8 Integration, Basic Sim Environment.</p>
+                        </div>
+                    </div>
+
+                    <!-- Phase 3 -->
+                    <div class="relative flex flex-col md:flex-row items-center gap-8">
+                         <div class="w-full md:w-1/2 md:text-right">
+                            <h3 class="text-2xl font-bold text-gray-500">Phase 3: Prototype</h3>
+                            <div class="text-gray-600 font-mono text-sm mb-2">Q3 2025</div>
+                            <p class="text-gray-600 text-sm">Hardware assembly (Quad + Acoustic Cannon), Flight Tests.</p>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-zinc-700 border border-white/20 rounded-full z-10"></div>
+                         <div class="w-full md:w-1/2 hidden md:block"></div>
+                    </div>
+
+                     <!-- Phase 4 -->
+                     <div class="relative flex flex-col md:flex-row items-center gap-8">
+                        <div class="w-full md:w-1/2 hidden md:block"></div>
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-zinc-700 border border-white/20 rounded-full z-10"></div>
+                        <div class="w-full md:w-1/2 md:pl-0">
+                           <h3 class="text-2xl font-bold text-gray-500">Phase 4: Field Ops</h3>
+                           <div class="text-gray-600 font-mono text-sm mb-2">Q4 2025</div>
+                           <p class="text-gray-600 text-sm">Live Fire Tests, Swarm Coordination Logic.</p>
+                       </div>
+                   </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-12 px-6 border-t border-white/10 text-center">
+            <p class="text-gray-500 text-sm">© 2025 VibeExtinct. Open Source Initiative.</p>
+        </footer>
+
+	</main>
+</Layout>
+
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Hero Animation
+    gsap.to(".hero-content", {
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
+        ease: "power4.out",
+        delay: 0.2
+    });
+
+    // Features Stagger
+    gsap.utils.toArray('.feature-card').forEach((card: any, i) => {
+        gsap.from(card, {
+            scrollTrigger: {
+                trigger: card,
+                start: "top 85%",
+            },
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            delay: i * 0.1,
+            ease: "power3.out"
+        });
+    });
+
+    // Roadmap Animation
+    gsap.from("#roadmap h2", {
+        scrollTrigger: {
+            trigger: "#roadmap",
+            start: "top 80%"
+        },
+        opacity: 0,
+        y: 30,
+        duration: 1
+    });
+
+</script>
+
+<style>
+    .clip-path-slant {
+        clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .glitch-text {
+        text-shadow: 2px 2px 0px rgba(255,0,0,0.5), -2px -2px 0px rgba(0,0,255,0.5);
+    }
+</style>

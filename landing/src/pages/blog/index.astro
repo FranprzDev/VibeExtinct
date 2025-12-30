@@ -1,0 +1,66 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { supabase } from '../../lib/supabase';
+
+// Fetch posts
+let posts = [];
+let error = null;
+
+try {
+    const { data, error: dbError } = await supabase
+        .from('posts')
+        .select('*')
+        .order('created_at', { ascending: false });
+    
+    if (dbError) {
+        console.error("Supabase Error:", dbError);
+        error = dbError.message;
+    } else {
+        posts = data || [];
+    }
+} catch (e) {
+    console.error("Connection Error:", e);
+    error = "Could not connect to Supabase. Check your .env credentials.";
+}
+
+const title = "VibeExtinct | Intel";
+---
+
+<Layout title={title}>
+    <main class="min-h-screen pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold mb-12">MISSION <span class="text-orange-600">INTEL</span></h1>
+            
+            <a href="/" class="text-gray-500 hover:text-white mb-12 inline-block">← Back to Operations</a>
+
+            {error && (
+                <div class="p-4 border border-red-500 bg-red-500/10 text-red-200 rounded mb-8">
+                    System Alert: {error}
+                </div>
+            )}
+
+            {!error && posts.length === 0 && (
+                <div class="text-gray-500 italic">No mission reports available currently.</div>
+            )}
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {posts.map((post: any) => (
+                    <a href={`/blog/${post.slug}`} class="group block border border-white/10 bg-zinc-900 overflow-hidden hover:border-orange-500/50 transition-all">
+                        <div class="h-48 bg-zinc-800 relative overflow-hidden">
+                             {post.image_url ? (
+                                <img src={post.image_url} alt={post.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            ) : (
+                                <div class="w-full h-full flex items-center justify-center bg-zinc-800 text-zinc-700">NO IMG</div>
+                            )}
+                        </div>
+                        <div class="p-6">
+                            <div class="text-orange-500 text-xs font-mono mb-2">{new Date(post.created_at).toLocaleDateString()}</div>
+                            <h2 class="text-xl font-bold mb-3 group-hover:text-orange-500 transition-colors">{post.title}</h2>
+                            <p class="text-gray-400 text-sm line-clamp-3">{post.content}</p>
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </div>
+    </main>
+</Layout>
